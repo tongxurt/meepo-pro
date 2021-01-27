@@ -9,3 +9,9 @@
 
 ## 演示视频
 https://mp-videos.oss-cn-beijing.aliyuncs.com/1611740553532479.mp4
+
+## 详细功能介绍
+- 小视频页
+- 短视频页
+- 资讯页
+- 个人页
