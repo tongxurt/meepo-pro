@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_background">
+
+
+    <RelativeLayout
+        android:id="@+id/header_rl"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:paddingStart="@dimen/header_paddingLeft"
+        android:paddingEnd="@dimen/header_paddingRight">
+
+        <ImageView
+            android:id="@+id/close_iv"
+            android:layout_width="@dimen/header_icon_size"
+            android:layout_height="@dimen/header_icon_size"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back" />
+
+
+    </RelativeLayout>
+
+    <!--    登录  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_rl"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <!--    验证码登录    -->
+        <LinearLayout
+            android:id="@+id/code_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="验证码登录"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/auth_title_text_size" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/code_phoneNo_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/auth_et_text_size" />
+
+            <com.meepo.design.divider.Divider
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <com.meepo.design.button.SlickButton
+                android:id="@+id/code_send_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/auth_btn_height"
+                android:layout_marginTop="30dp"
+                android:text="获取短信验证码"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/auth_btn_text_size"
+                app:btn_color="@color/primary_color" />
+        </LinearLayout>
+
+        <!--    密码登录    -->
+        <LinearLayout
+            android:id="@+id/password_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="密码登录"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/auth_title_text_size" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/password_phoneNo_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@null"
+
+                android:hint="请输入手机号"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/auth_et_text_size" />
+
+            <com.meepo.design.divider.Divider
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/password_pw_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/password_show_iv"
+                    android:background="@null"
+                    android:hint="请输入8位以上密码"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColorHint="@color/hint_text_color"
+                    android:textSize="@dimen/auth_et_text_size" />
+
+                <ImageView
+                    android:id="@+id/password_show_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_eye_close" />
+
+            </RelativeLayout>
+
+            <com.meepo.design.divider.Divider
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+
+            <com.meepo.design.button.SlickButton
+                android:id="@+id/password_login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/auth_btn_height"
+                android:layout_marginTop="30dp"
+                android:text="登录"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/auth_btn_text_size"
+                app:btn_color="@color/primary_color" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/password_forget_tv"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="忘记密码"-->
+            <!--                android:textColor="@color/hint_text_color" />-->
+        </LinearLayout>
+
+        <!--    一键登录    -->
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/one_key_ll"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="vertical">-->
+
+        <!--            <TextView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="一键登录"-->
+        <!--                android:textColor="@color/primary_text_color"-->
+        <!--                android:textSize="@dimen/auth_title_text_size" />-->
+
+
+        <!--            <androidx.appcompat.widget.AppCompatEditText-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="50dp"-->
+        <!--                android:background="@null"-->
+        <!--                android:hint="请输入手机号"-->
+
+        <!--                android:maxLines="1"-->
+        <!--                android:textColorHint="@color/hint_text_color"-->
+        <!--                android:textSize="@dimen/auth_et_text_size" />-->
+
+        <!--            <com.meepo.design.divider.Divider-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="0.8dp"-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                android:layout_marginBottom="10dp" />-->
+
+
+        <!--            <com.meepo.design.button.SlickButton-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="@dimen/auth_btn_height"-->
+        <!--                android:layout_marginTop="30dp"-->
+        <!--                android:text="获取短信验证码"-->
+        <!--                android:textColor="#ffffff"-->
+        <!--                android:textSize="@dimen/auth_btn_text_size"-->
+        <!--                app:btn_color="@color/primary_color" />-->
+        <!--        </LinearLayout>-->
+    </LinearLayout>
+
+    <!--    切换登录方式区  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/method_one_key_ll"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:gravity="center">-->
+
+            <!--                <com.meepo.design.text.icontext.IconText-->
+            <!--                    android:id="@+id/one_key_it"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    app:it_iconResId="@drawable/ic_one_key"-->
+            <!--                    app:it_size="50dp"-->
+            <!--                    app:it_title="一键登录"-->
+            <!--                    app:it_titleColor="@color/hint_text_color" />-->
+
+            <!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/method_code_ll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.meepo.design.text.icontext.IconText
+                    android:id="@+id/code_it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:it_iconResId="@drawable/ic_phone"
+                    app:it_size="40dp"
+                    app:it_title="短信"
+                    app:it_titleColor="@color/hint_text_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/method_password_ll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.meepo.design.text.icontext.IconText
+                    android:id="@+id/password_it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:it_iconResId="@drawable/ic_lock"
+                    app:it_size="40dp"
+                    app:it_title="密码"
+                    app:it_titleColor="@color/hint_text_color" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登录即代表您已阅读并同意"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/auth_user_protocol_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="「用户协议」"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/auth_user_protocol_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="「隐私政策」"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/auth_user_protocol_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

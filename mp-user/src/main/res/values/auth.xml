@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="auth_title_text_size">25sp</dimen>
+    <dimen name="auth_supplement_text_size">14sp</dimen>
+    <dimen name="auth_btn_text_size">17sp</dimen>
+    <dimen name="auth_btn_height">50dp</dimen>
+    <dimen name="auth_et_text_size">15sp</dimen>
+    <dimen name="auth_user_protocol_text_size">10sp</dimen>
+</resources>

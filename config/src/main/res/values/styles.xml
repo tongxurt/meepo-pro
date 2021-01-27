@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+
+    </style>
+
+    <style name="AppTheme.FullScreen" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.ActivityRIRO" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/Animation.RightIn.RightOut</item>
+    </style>
+
+    <style name="AppTheme.ActivityBIBO" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/Animation.BottomIn.BottomOut</item>
+    </style>
+
+
+</resources>

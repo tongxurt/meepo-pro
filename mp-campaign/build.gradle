@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdkVersion rootProject.ext.build["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.build["buildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.build["minSdkVersion"]
+        targetSdkVersion rootProject.ext.build["targetSdkVersion"]
+
+        versionCode rootProject.ext.build["versionCode"]
+        versionName rootProject.ext.build["versionName"]
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+
+    implementation project(':mp-feed')
+    implementation project(':mp-settings')
+    implementation project(':mp-basic')
+    implementation project(":config")
+    implementation fileTree(dir: "../libs", include: ["*.jar", "*.aar"])
+
+    implementation rootProject.ext.dependencies["org.jetbrains.kotlin"]
+    implementation rootProject.ext.dependencies["androidx.core"]
+    implementation rootProject.ext.dependencies['androidx.appcompat']
+    testImplementation rootProject.ext.dependencies['junit']
+    androidTestImplementation rootProject.ext.dependencies['androidx.test.ext']
+    androidTestImplementation rootProject.ext.dependencies['androidx.test.espresso']
+
+}

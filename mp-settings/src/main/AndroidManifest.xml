@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.meepo.settings">
+
+    <application>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".nightmode.SettingsNightModeActivity" />
+    </application>
+</manifest>

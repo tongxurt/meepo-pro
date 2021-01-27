@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/thumb_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/ctrl_iv"
+        android:layout_width="@dimen/dkplayer_play_btn_size"
+        android:layout_height="@dimen/dkplayer_play_btn_size"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dkplayer_shape_play_bg"
+        android:padding="@dimen/dkplayer_default_spacing"
+        android:src="@drawable/dkplayer_selector_play_button"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+    <LinearLayout
+        android:id="@+id/action_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/default_sub_space_between"
+        android:paddingVertical="50dp">
+
+        <com.meepo.design.imageview.CircularImage
+            android:id="@+id/avatar_ci"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_default_avatar" />
+
+        <com.meepo.design.text.icontext.IconText
+            android:id="@+id/like_it"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:it_iconResId="@drawable/ic_heart"
+            app:it_size="35dp"
+            app:it_title="1.7w"
+            app:it_titleColor="@android:color/white" />
+
+
+        <com.meepo.design.text.icontext.IconText
+            android:id="@+id/comment_it"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+
+            app:it_iconResId="@drawable/ic_comment"
+            app:it_size="35dp"
+            app:it_title="1.7w"
+            app:it_titleColor="@android:color/white" />
+
+        <com.meepo.design.text.icontext.IconText
+            android:id="@+id/share_it"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+
+            app:it_iconResId="@drawable/ic_comment"
+            app:it_size="35dp"
+            app:it_title="1.7w"
+            app:it_titleColor="@android:color/white" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/action_ll"
+        android:orientation="vertical"
+        android:padding="@dimen/default_space_between">
+
+        <TextView
+            android:id="@+id/nickname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/video_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <com.meepo.design.text.tpl.SmartText
+        android:id="@+id/detail_smarttext"
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/close_iv"
+        android:layout_width="17dp"
+        android:layout_height="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:alpha="0.1"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_close_box" />
+
+</RelativeLayout>
+

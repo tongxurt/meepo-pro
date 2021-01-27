@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.meepo.feed">
+
+    <application>
+        <activity
+            android:name="com.meepo.feed.article.core.detail.DetailActivity"
+            android:theme="@style/AppTheme.ActivityRIRO" />
+        <activity
+            android:name="com.meepo.feed.article.core.search.SearchActivity"
+            android:theme="@style/AppTheme.ActivityRIRO" />
+        <activity
+            android:name="com.meepo.feed.article.core.history.HistoryActivity"
+            android:theme="@style/AppTheme.ActivityRIRO" />
+        <activity
+            android:name="com.meepo.feed.article.core.detail.reply.CommentReplyActivity"
+            android:theme="@style/AppTheme.ActivityBIBO" />
+        <activity
+            android:name="com.meepo.feed.minivideo.profile.ProfileActivity"
+            android:theme="@style/AppTheme.ActivityRIRO" />
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="appName"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.meepo.pro"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </application>
+</manifest>
