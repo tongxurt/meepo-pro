@@ -1,7 +1,7 @@
 
 # 详细请关注 http://www.meepod.cn
 
-## 预览
+## 下载预览
 
 ![扫码下载](https://ec-apps.oss-cn-beijing.aliyuncs.com/meepo_apk_code.png)
 
