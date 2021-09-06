@@ -3,7 +3,7 @@
 
 ## 预览
 
-[](https://ec-apps.oss-cn-beijing.aliyuncs.com/meepo_apk_code.png)
+![扫码下载](https://ec-apps.oss-cn-beijing.aliyuncs.com/meepo_apk_code.png)
 
 
 # meepo-pro
