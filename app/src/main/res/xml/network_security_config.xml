@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><network-security-config>    <!--    可使用http 协议-->    <base-config cleartextTrafficPermitted="true" /></network-security-config>

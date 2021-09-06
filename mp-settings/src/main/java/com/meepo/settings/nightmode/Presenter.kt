@@ -1,1 +1,0 @@
-package com.meepo.settings.nightmodeimport com.meepo.sdk.base.mvp.BasePresenterimport com.meepo.settings.Store/** * @author  佟旭 * @wechat tongxury * @date  2020/10/14 10:46 PM * @version 1.0 */class Presenter : BasePresenter<IContract.IView>(), IContract.IPresenter

@@ -1,1 +1,0 @@
-include ':mp-campaign'include ':mp-basic'include ':mp-task'include ':config'include ':mp-feed'include ':mp-user'include ':mp-settings'include ':app'rootProject.name = "meepo-pro"
