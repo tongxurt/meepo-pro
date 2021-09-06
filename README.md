@@ -1,6 +1,11 @@
 
 # 详细请关注 http://www.meepod.cn
 
+## 预览
+
+[](https://ec-apps.oss-cn-beijing.aliyuncs.com/meepo_apk_code.png)
+
+
 # meepo-pro
 高仿最右app，支持抖音版竖屏播放，西瓜视频列表播放
 
